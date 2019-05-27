@@ -1,22 +1,46 @@
-Santa make a wish app
-==========================
+# nodejs coding challenge:
 
-The app should display a form for children to enter their id and a free text message to santa.
+## Glitch Instructions
 
-When submitting the form, the server should check that the child is registered (his id is found in the santa API), and that the child is less than 10 years old.\
-List of users and user profiles are available from the santa API at /users.json and /userProfiles.json.\
-If any of those conditions fail, the app should diaply a basic error page with an error message.\
-If all is well, the request should be stored to be sent (storing in memory is fine).\
+1. **Clone**: Go to this URL: https://glitch.com/~cnodejs-santa-app and click the `Remix your own` button to clone the code. This will copy all the code to a new, randomly generated URL (e.g. https://glitch.com/edit/#!/capable-toothpaste). This is your URL to code on, no other candidates will have this URL.
 
-Every 15s, the app should find all pending requests and send an email to santa with the requests:
+2. **Code**: You can edit the code directly in the Glitch editor or use your editor of choice (VSCode, Sublime, etc) and copy paste the files into Glitch. Git import and export is also available in the Tools menu on the bottom left. How you edit the code is entirely up to you, so long as your finished work is viewable at the URL created in the previous step.
+
+> **NOTE**: Click `Show` in the header to see your app live. Updates to your code will instantly deploy and update live.
+
+4. **Turn in**: When you finish coding, send your URL to us so we can review your code. 
+
+## Objectives overview:
+
+The webapp should display a form for children to enter their id and a free text message to santa.
+
+When submitting the form, the server should check:
+ 1. that the child is registered
+ 2. that the child is less than 10 years old.
+To this purpose, the server can fetch user and profiles data in JSON format from:
+- https://raw.githubusercontent.com/alj-devops/santa-data/master/userProfiles.json
+- https://raw.githubusercontent.com/alj-devops/santa-data/master/users.json
+
+If the child is not registered (no match for the user id) or more than 10years old, the webapp should display a basic error page with an error message explaining the problem.\
+If the child is registered and less than 10 years old, the server should show a page indicating that the request has been received.
+
+Every 15seconds, the server should send an email with information on all pending requests including:
 - child id
-- address
-- child's request
+- child's address
+- request free text as was input in the form
+Email sender should be set as do_not_reply@northpole.com, and sent to santa@northpole.com
 
-Somebody started to work on the app, but it's up to you to complete it.
 
+## tips and detailed instructions:
 
-This was bootstraped from glitch, their README is below:
+- somebody started to work on the app, but left it unfinished. It is up to you to complete it. You are allowed to restart from scratch if you prefer.
+- the look and feel of the application for this challenge is not the priority. The pages/email do not need to look good, as long as they convey the information effectively.
+- you should fetch the JSON data at every form submission (consider it as an API)
+- for the sake of the challenge, you do not need to store the requests in a permanent storage, in-memory storage is fine
+- feel free to select and add npm packages as needed
+- to get an smtp server for emails, go to https://ethereal.email/ and click "Create Ethereal Account".\
+This will give you an account (take note of your username and pwd if you need to re-logon later) and smtp server (actual emails do not get delivered).\
+Go to https://ethereal.email/messages to see the emails that have been received by the smtp server.
 
 Welcome to Glitch
 =================
