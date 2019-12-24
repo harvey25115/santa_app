@@ -1,6 +1,6 @@
 # nodejs coding challenge:
 
-## Glitch Instructions
+## How to create and submit your app using glitch
 
 1. **Clone**: Go to this URL: https://glitch.com/~nodejs-santa-app and click the `Remix your own` button to clone the code. This will copy all the code to a new, randomly generated URL (e.g. https://glitch.com/edit/#!/capable-toothpaste). This is your URL to code on, no other candidates will have this URL.
 
@@ -8,7 +8,8 @@
 
 > **NOTE**: Click `Show` in the header to see your app live. Updates to your code will instantly deploy and update live.
 
-4. **Turn in**: When you finish coding, send your URL to us so we can review your code. 
+4. **Turn in**: When you finish coding, send your URL to us so we can review your code.
+
 
 ## Objectives overview:
 
@@ -24,33 +25,37 @@ To this purpose, the server can fetch user and profiles data in JSON format from
 If the child is not registered (no match for the user id) or more than 10years old, the webapp should display a basic error page with an error message explaining the problem.\
 If the child is registered and less than 10 years old, the server should show a page indicating that the request has been received.
 
-Every 15seconds, the server should send an email with information on all pending requests including:
-- child id
-- child's address
+Every 15seconds, the server should send an email with information on all pending (not yet sent) requests including:
+- child username (eg. charlie.brown)
+- child's address (eg. 219-1130, Ikanikeisaiganaibaai, Musashino-shi, Tokyo)
 - request free text as was input in the form
-Email sender should be set as do_not_reply@northpole.com, and sent to santa@northpole.com
 
+Email sender should be set as do_not_reply@northpole.com, and sent to santa@northpole.com
 
 ## tips and detailed instructions:
 
 - somebody started to work on the app, but left it unfinished. It is up to you to complete it. You are allowed to restart from scratch if you prefer.
 - the look and feel of the application for this challenge is not the priority. The pages/email do not need to look good, as long as they convey the information effectively.
 - you should fetch the JSON data at every form submission (consider it as an API)
-- for the sake of the challenge, you do not need to store the requests in a permanent storage, in-memory storage is fine
-- feel free to select and add npm packages as needed
+- for the sake of the challenge, you can keep the requests in-memory only
+- you are encouraged to select and use npm packages as needed (you can add packages by editing package.json, or using `npm install` from the glitch console)
 - to get an smtp server for emails, go to https://ethereal.email/ and click "Create Ethereal Account".\
 This will give you an account (take note of your username and pwd if you need to re-logon later) and smtp server (actual emails do not get delivered).\
 Go to https://ethereal.email/messages to see the emails that have been received by the smtp server.
 
-Welcome to Glitch
-=================
+
+
+## Some things we will look for in your submission
+- Code quality (readability, use of modern syntax...)
+- Does the app work as designed (cf. objectives overview)
+- App architecture (folder structure, configuration management...)
+
+
+
+## tips on usage of glitch
 
 Click `Show` in the header to see your app live. Updates to your code will instantly deploy and update live.
-
-**Glitch** is the friendly community where you'll build the app of your dreams. Glitch lets you instantly create, remix, edit, and host an app, bot or site, and you can invite collaborators or helpers to simultaneously edit code with you.
-
-Find out more [about Glitch](https://glitch.com/about).
-
+When your app is running, you can access logs and console using the "Tools" button at the bottom left.
 
 Your Project
 ------------
@@ -63,9 +68,4 @@ On the back-end,
 - your app starts at `server.js`
 - add frameworks and packages in `package.json`
 - safely store app secrets in `.env` (nobody can see this but you and people you invite)
-
-
-Made by [Glitch](https://glitch.com/)
--------------------
-
-\ ゜o゜)ノ
+- app uses node8 by default, it is possible to update the version of nodejs used: https://glitch.com/help/node/
