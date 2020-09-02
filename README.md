@@ -1,6 +1,14 @@
+# IMPORTANT! READ before starting
+By default for anonymous users (non logged in), your code and app will only remain on glitch.com for 5 days.
+In order to not lose your challenge, please create a glitch.com account and log in to glitch.com before proceeding.
+
+The following README contains instructions to guide you through the coding challenge, please read them carefully.
+
 # nodejs coding challenge:
 
 ## How to create and submit your app using glitch
+
+0. **Login to glitch**: make sure you are logged in to glitch.com
 
 1. **Clone**: Go to this URL: https://glitch.com/~nodejs-santa-app and click the `Remix your own` button to clone the code. This will copy all the code to a new, randomly generated URL (e.g. https://glitch.com/edit/#!/capable-toothpaste). This is your URL to code on, no other candidates will have this URL.
 
