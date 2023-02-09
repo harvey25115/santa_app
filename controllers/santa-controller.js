@@ -64,7 +64,6 @@ function displayErrorPage(response, message) {
  * Process request from user
  */
 async function send(request, response) {
-  console.log(request.body);
   const userProfile = await isRegistered(request.body.userid);
   if (!userProfile) {
     // if user is not found, display error page
