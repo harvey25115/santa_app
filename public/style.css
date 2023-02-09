@@ -7,6 +7,10 @@
 
 body {
   font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
+  margin: 0;
+}
+
+.body {
   margin: 2em;
 }
 
@@ -23,7 +27,8 @@ p {
   max-width: 600px;
 }
 
-input, textarea {
+input,
+textarea {
   display: block;
   margin-bottom: 10px;
   padding: 5px;
@@ -58,4 +63,40 @@ footer {
   margin-top: 50px;
   padding-top: 25px;
   border-top: 1px solid lightgrey;
+}
+
+.heading {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.santaImg {
+  height: 350px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.msgSection {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.message {
+  font-size: 1.5rem;
+  font-style: italic;
+}
+
+.error {
+  color: red;
+}
+
+.success {
+  color: green;
 }
