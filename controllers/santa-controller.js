@@ -67,7 +67,7 @@ async function send(request, response) {
   const userProfile = await isRegistered(request.body.userid);
   if (!userProfile) {
     // if user is not found, display error page
-    displayErrorPage(response, "The user was not found.");
+    displayErrorPage(response, "The user cannot be found.");
   } else {
     const isAgeOK = await isRightAge(userProfile.birthdate);
     if (!isAgeOK) {
