@@ -24,7 +24,7 @@ app.set("view engine", "html"); // set view engine
 app.engine("html", hbs.__express); // change extension from .hbs to .html
 
 // http://expressjs.com/en/starter/basic-routing.html
-app.get("/", (request, response) => {
+app.get("/", (_, response) => {
   response.render("index");
 });
 

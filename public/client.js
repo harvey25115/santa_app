@@ -7,7 +7,7 @@ const santaForm = document.forms[0];
 // listen for the form to be submitted and add a new dream when it is
 santaForm.onsubmit = function (event) {
   event.preventDefault();
-  let { wish, userid } = this;
+  let { wish } = this;
   // check the text isn't more than 100chars before submitting
   // already has validator on html side, but just in case added custom validator
   if (wish.value.length > 100) {
